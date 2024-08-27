@@ -11,6 +11,7 @@ function App() {
     setTodos((prev) => [{ id: Date.now(), ...todo }, ...prev])
 
   }
+  
 
   const updateTodo = (id, todo) => {
     setTodos((prev) => prev.map((prevTodo) => (prevTodo.id ===
@@ -28,7 +29,7 @@ function App() {
       id ? { ...prevTodo, completed: !prevTodo.completed } : prevTodo))
 
   }
-
+  
 
   useEffect(() => {
     const todos = JSON.parse(localStorage.getItem("todos"))
@@ -57,9 +58,9 @@ function App() {
           </div>
           <div className="flex flex-wrap gap-y-3">
             {/*Loop and Add TodoItem here */}
-            {todos.map((todo)=>(
-              <div key = {todo.id}  className='w-full'>
-                <TodoItem todo={todo}/>       
+            {todos.map((todo123)=>(
+              <div key = {todo123.id}  className='w-full'>
+                <TodoItem todo={todo123}/>       
               </div>
             ))}
           </div>
